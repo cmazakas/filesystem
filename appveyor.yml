@@ -104,7 +104,7 @@ test_script:
   - if not "%CXXSTD%" == "" set CXXSTD=cxxstd=%CXXSTD%
   - if not "%ADDRMD%" == "" set ADDRMD=address-model=%ADDRMD%
   - if not "%THREADING%" == "" set THREADING=threading=%THREADING%
-  - b2 -j %NUMBER_OF_PROCESSORS% libs/filesystem/test toolset=%TOOLSET% %CXXSTD% %ADDRMD% %THREADING%
+  - b2 -j %NUMBER_OF_PROCESSORS% libs/filesystem/test toolset=%TOOLSET% %CXXSTD% %ADDRMD% %THREADING% rtti=on,off
 
 for:
   - matrix:
